@@ -41,6 +41,15 @@ gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Since with Rails version 7, SCSS is disabled by default, we have to enable it
+gem "sassc-rails"
+
+gem "bootstrap", "~> 5.3"
+
+gem "font-awesome-sass"
+
+gem "autoprefixer-rails"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
