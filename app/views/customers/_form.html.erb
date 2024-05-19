@@ -1,4 +1,25 @@
-<%= form_with(model: customer) do |form| %>
+<%# Resources to integrate flatpickr  :
+    - "How to use importmap to pin npm, yarn packages in Rails7?"
+      https://stackoverflow.com/questions/71793292/how-to-use-importmap-to-pin-npm-yarn-packages-in-rails7
+    - https://github.com/rails/importmap-rails
+    - "Adding npm Packages with importmap-rails"
+      https://guides.rubyonrails.org/working_with_javascript_in_rails.html#adding-npm-packages-with-importmap-rails
+    - "flatpickr via rails importmap not being generated"
+      https://stackoverflow.com/questions/70769016/flatpickr-via-rails-importmap-not-being-generated
+    - "Flatpickr Date Picker in Ruby on Rails 7"
+      https://www.youtube.com/watch?v=tww-0bO4zCY
+    - "Setting up Flatpickr with Simple Form in Rails 7"
+      https://www.firsttiger.com/blogs/setting-flatpickr-with-rails-7/
+    - https://flatpickr.js.org/
+
+    Important:
+    - No yarn was used
+    - No flatpickr css file was added (flatpickr's stylesheet is called via link)
+    - Below, data is important, otherwise form does not call flatpickr %>
+
+<%= form_with(model: customer, data: {
+  controller: "flatpickr"
+  }) do |form| %>
   <% if customer.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
@@ -33,7 +54,7 @@
 
   <div>
     <%= form.label :date_of_birth, style: "display: block" %>
-    <%= form.date_select :date_of_birth %>
+    <%= form.date_field :date_of_birth, class: "date", type:"text", placeholder:"dd/mm/yy" %>
   </div>
 
   <div>
