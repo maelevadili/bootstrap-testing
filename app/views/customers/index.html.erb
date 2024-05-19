@@ -20,31 +20,35 @@
         <td><%= customer.email %></td>
         <td><%= customer.phone %></td>
         <td><%= customer.date_of_birth %></td>
-        <td>
-          <button class="btn btn-primary dropdown-toggle" id="btnGroupVerticalDrop1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select
-            <span class="fa-solid fa-caret-down" me-1" data-fa-transform="shrink-3"></span>
+        <td class="py-2 align-middle white-space-nowrap">
+          <div class="dropdown font-sans-serif position-static">
+          <button class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal" type="button" id="order-dropdown-0" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-ellipsis-h fs-10"></span>
           </button>
-          <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-            <!-- Customer show -->
-            <%= link_to customer_path(customer.id),
-            class: "dropdown-item" do %>
-              <i class="fas fa-eye"></i> Get details
-            <% end %>
-            <!-- Customer edit -->
-            <%= link_to edit_customer_path(customer.id),
-            class: "dropdown-item" do %>
-              <i class="fas fa-edit"></i> Edit
-            <% end %>
-          <!-- Customer destroy -->
-          <%= link_to customer_path(customer.id),
-            method: :delete,
-            data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'},
-            class: "dropdown-item" do %>
-              <i class="fas fa-trash-alt"></i> Delete
-          <% end %>
+            <div class="dropdown-menu dropdown-menu-end border py-0" aria-labelledby="order-dropdown-0">
+              <div class="py-2">
+                <!-- Customer show -->
+                <%= link_to customer_path(customer.id),
+                class: "dropdown-item" do %>
+                  <i class="fas fa-eye"></i> Get details
+                <% end %>
+                <!-- Customer edit -->
+                <%= link_to edit_customer_path(customer.id),
+                class: "dropdown-item" do %>
+                  <i class="fas fa-edit"></i> Edit
+                <% end %>
+                <!-- Customer destroy -->
+                <%= link_to customer_path(customer.id),
+                  method: :delete,
+                  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'},
+                  class: "dropdown-item" do %>
+                    <i class="fas fa-trash-alt"></i> Delete
+                <% end %>
+              </div>
+            </div>
           </div>
         </td>
+      </tr>
     </tbody>
   <% end %>
 </table>
