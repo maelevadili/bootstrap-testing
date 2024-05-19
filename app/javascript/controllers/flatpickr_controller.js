@@ -1,7 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-// Necessary
-import flatpickr from "flatpickr"
-
+import flatpickr from "flatpickr" // Needed to import this to use new flatpickr()
 
 // Connects to data-controller="flatpickr"
 export default class extends Controller {
