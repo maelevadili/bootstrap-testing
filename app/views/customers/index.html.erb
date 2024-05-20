@@ -82,7 +82,7 @@
   <div class="card border h-100 border-secondary mb-3 mt-3">
     <div class="card-body">
       <div class="card-title">Testing toggle function</div>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">toggle_controller.js created to handle content that appears only when button, checkbox or link is clicked.</p>
       <%# WITH BUTTON %>
       <div class="m-1" data-controller="toggle">
         <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add customer</button>
@@ -96,6 +96,13 @@
         <label class="form-check-label" for="flexCheckDefault">
           Add customer
         </label>
+        <div data-toggle-target="togglableElement" class="d-none">
+          <%= render "form", customer: @customer %>
+        </div>
+      </div>
+      <%# WITH LINK %>
+      <div data-controller="toggle">
+        <a class="link-primary" data-action="click->toggle#fire">Add customer</a>
         <div data-toggle-target="togglableElement" class="d-none">
           <%= render "form", customer: @customer %>
         </div>
