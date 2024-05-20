@@ -78,6 +78,32 @@
   <i class="fa-solid fa-plus"></i> Add customer
 <% end %>
 &nbsp;
+<div class="row">
+  <div class="card border h-100 border-secondary mb-3 mt-3">
+    <div class="card-body">
+      <div class="card-title">Testing toggle function</div>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <%# WITH BUTTON %>
+      <div class="m-1" data-controller="toggle">
+        <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add customer</button>
+        <div data-toggle-target="togglableElement" class="d-none">
+          <%= render "form", customer: @customer %>
+        </div>
+      </div>
+      <%# WITH CHECKBOX %>
+      <div class="form-check" data-controller="toggle">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" data-action="click->toggle#fire">
+        <label class="form-check-label" for="flexCheckDefault">
+          Add customer
+        </label>
+        <div data-toggle-target="togglableElement" class="d-none">
+          <%= render "form", customer: @customer %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+&nbsp;
 <div class="card mb-3" id="ordersTable" data-list="{&quot;valueNames&quot;:[&quot;order&quot;,&quot;date&quot;,&quot;address&quot;,&quot;status&quot;,&quot;amount&quot;],&quot;page&quot;:10,&quot;pagination&quot;:true}">
   <div class="card-header">
     <div class="row flex-between-center">
