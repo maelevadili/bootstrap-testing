@@ -3,7 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
-import "fullcalendar"
+// import "fullcalendar"
 
 // Conflict with Bootstrap ⬇️
 // import "theme"
@@ -24,6 +24,10 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 
 // FULLCALENDAR
+// Important : fullcalendar needs jquery and moment to work properly,
+// make sure to add them in app layout.
+// Also add fullcalendar css to layout.
+
 // Extra functions to load FullCalendar properly
 // The first function loads all your FullCalendar configuration, and the second one removes
 // FullCalendar from a before_cache tag.
