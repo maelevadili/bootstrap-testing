@@ -11,3 +11,4 @@ pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "stimulus-flatpickr" # @3.0.0
 pin "flatpickr" # @4.6.13
+pin "fullcalendar" # @5.11.3
