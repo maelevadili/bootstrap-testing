@@ -1,14 +1,15 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "controllers"
+import "flatpickr"
 import "@popperjs/core"
 import "bootstrap"
 // import "fullcalendar"
 
 // Conflict with Bootstrap ⬇️
 // import "theme"
-// import "flatpickr"
 // import "simplebar"
+// Maybe it's just a question of order? To be tested...
 
 // BOOTSTRAP
 // Enable popovers everywhere
