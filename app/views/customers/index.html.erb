@@ -1,79 +1,5 @@
 <p style="color: green"><%= notice %></p>
 <h1>Customers</h1>
-<div class="card overflow-hidden">
-  <div class="card-header">
-    <div class="row gx-0 align-items-center">
-      <div class="col-auto d-flex justify-content-end order-md-1">
-        <button class="btn icon-item icon-item-sm shadow-none p-0 me-1 ms-md-2" type="button" data-event="prev" data-bs-toggle="tooltip" title="Previous"><span class="fas fa-arrow-left"></span></button>
-        <button class="btn icon-item icon-item-sm shadow-none p-0 me-1 me-lg-2" type="button" data-event="next" data-bs-toggle="tooltip" title="Next"><span class="fas fa-arrow-right"></span></button>
-      </div>
-      <div class="col-auto col-md-auto order-md-2">
-        <h4 class="mb-0 fs-9 fs-sm-8 fs-lg-7 calendar-title"></h4>
-      </div>
-      <div class="col col-md-auto d-flex justify-content-end order-md-3">
-        <button class="btn btn-falcon-primary btn-sm" type="button" data-event="today">
-          Today
-        </button>
-      </div>
-      <div class="col-md-auto d-md-none">
-        <hr />
-      </div>
-      <div class="col-auto d-flex order-md-0">
-        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#addEventModal"> <span class="fas fa-plus me-2"></span>
-          Add Schedule
-        </button>
-      </div>
-      <div class="col d-flex justify-content-end order-md-2">
-        <div class="dropdown font-sans-serif me-md-2">
-          <button class="btn btn-falcon-default text-600 btn-sm dropdown-toggle dropdown-caret-none" type="button" id="email-filter" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span data-view-title="data-view-title">
-            Month View</span><span class="fas fa-sort ms-2 fs-10"></span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="email-filter">
-            <a class="active dropdown-item d-flex justify-content-between" href="#!" data-fc-view="dayGridMonth">
-              Month View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
-            </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="timeGridWeek">
-              Week View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
-            </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="timeGridDay">
-              Day View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
-            </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="listWeek">
-              List View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
-            </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="listYear">
-              Year View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-body">
-    <div data-controller="fullcalendar" id="calendar"></div>
-  </div>
-</div>
-&nbsp;
-<div data-simplebar class="card scrollbar-overlay" style="max-height: 10rem" data-controller="simplebar">
-  <div class="card-body">
-    <h3>Scroll me!</h3>
-    <p class="mb-0">This is an example of simplebar usage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae totam nihil quidem optio odio dolorum necessitatibus animi, incidunt consectetur voluptas impedit nesciunt alias delectus ex eius repellat ipsam aperiam laboriosam enim provident nisi molestias quibusdam. Ipsam ab, illo illum assumenda ex voluptas sit odit doloremque reprehenderit consequuntur facilis ipsa atque quo eius unde dicta! Laboriosam, suscipit, ex, expedita vitae ea maxime tenetur ut ipsum inventore dignissimos fugit quae. Odio fuga corporis maiores suscipit eos, hic numquam vero illum amet delectus eum minima optio id, tempore vitae dolores. Alias quibusdam aspernatur possimus? Eos cumque voluptatibus dolores aperiam veritatis voluptates consectetur quae quo nihil ratione laboriosam ut totam ab, recusandae, numquam impedit vel minus aliquam dignissimos fugiat ad incidunt iste expedita ea! Iusto, enim! Eos dolore ipsam recusandae ullam rem minima facilis, eligendi eaque? Reprehenderit, nostrum amet repudiandae, explicabo maxime modi magni illo, consequatur placeat natus ab at a enim fugiat!</p>
-  </div>
-</div>
-&nbsp;
-<div class="row g-1">
-  <div class="col-auto">
-    <button class="btn btn-secondary m-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top Popover" aria-haspopup="true" aria-expanded="true">
-      Top Popover
-    </button>
-  </div>
-  <div class="col-auto">
-    <button type="button" class="btn btn-secondary m-1" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
-      Tooltip on left
-    </button>
-  </div>
-</div>
-&nbsp;
 <!-- Customer new -->
 <table class="table">
   <thead>
@@ -134,6 +60,88 @@
   <i class="fa-solid fa-plus"></i> Add customer
 <% end %>
 &nbsp;
+<!-- Fullcalendar -->
+<h2 class="mt-4">Fullcalendar</H2>
+<div class="card overflow-hidden">
+  <div class="card-header">
+    <div class="row gx-0 align-items-center">
+      <div class="col-auto d-flex justify-content-end order-md-1">
+        <button class="btn icon-item icon-item-sm shadow-none p-0 me-1 ms-md-2" type="button" data-event="prev" data-bs-toggle="tooltip" title="Previous"><span class="fas fa-arrow-left"></span></button>
+        <button class="btn icon-item icon-item-sm shadow-none p-0 me-1 me-lg-2" type="button" data-event="next" data-bs-toggle="tooltip" title="Next"><span class="fas fa-arrow-right"></span></button>
+      </div>
+      <div class="col-auto col-md-auto order-md-2">
+        <h4 class="mb-0 fs-9 fs-sm-8 fs-lg-7 calendar-title"></h4>
+      </div>
+      <div class="col col-md-auto d-flex justify-content-end order-md-3">
+        <button class="btn btn-falcon-primary btn-sm" type="button" data-event="today">
+          Today
+        </button>
+      </div>
+      <div class="col-md-auto d-md-none">
+        <hr />
+      </div>
+      <div class="col-auto d-flex order-md-0">
+        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#addEventModal"> <span class="fas fa-plus me-2"></span>
+          Add Schedule
+        </button>
+      </div>
+      <div class="col d-flex justify-content-end order-md-2">
+        <div class="dropdown font-sans-serif me-md-2">
+          <button class="btn btn-falcon-default text-600 btn-sm dropdown-toggle dropdown-caret-none" type="button" id="email-filter" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span data-view-title="data-view-title">
+            Month View</span><span class="fas fa-sort ms-2 fs-10"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="email-filter">
+            <a class="active dropdown-item d-flex justify-content-between" href="#!" data-fc-view="dayGridMonth">
+              Month View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
+            </a>
+            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="timeGridWeek">
+              Week View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
+            </a>
+            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="timeGridDay">
+              Day View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
+            </a>
+            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="listWeek">
+              List View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
+            </a>
+            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="listYear">
+              Year View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div data-controller="fullcalendar" id="calendar"></div>
+  </div>
+</div>
+&nbsp;
+<!-- Simplebar -->
+<h2 class="mt-4">Simplebar</H2>
+<div data-simplebar class="card scrollbar-overlay" style="max-height: 10rem" data-controller="simplebar">
+  <div class="card-body">
+    <h3>Scroll me!</h3>
+    <p class="mb-0">This is an example of simplebar usage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae totam nihil quidem optio odio dolorum necessitatibus animi, incidunt consectetur voluptas impedit nesciunt alias delectus ex eius repellat ipsam aperiam laboriosam enim provident nisi molestias quibusdam. Ipsam ab, illo illum assumenda ex voluptas sit odit doloremque reprehenderit consequuntur facilis ipsa atque quo eius unde dicta! Laboriosam, suscipit, ex, expedita vitae ea maxime tenetur ut ipsum inventore dignissimos fugit quae. Odio fuga corporis maiores suscipit eos, hic numquam vero illum amet delectus eum minima optio id, tempore vitae dolores. Alias quibusdam aspernatur possimus? Eos cumque voluptatibus dolores aperiam veritatis voluptates consectetur quae quo nihil ratione laboriosam ut totam ab, recusandae, numquam impedit vel minus aliquam dignissimos fugiat ad incidunt iste expedita ea! Iusto, enim! Eos dolore ipsam recusandae ullam rem minima facilis, eligendi eaque? Reprehenderit, nostrum amet repudiandae, explicabo maxime modi magni illo, consequatur placeat natus ab at a enim fugiat!</p>
+  </div>
+</div>
+&nbsp;
+<!-- Bootstrap popover & tooltip -->
+<h2 class="mt-4">Popover and tooltip</H2>
+<div class="row g-1">
+  <div class="col-auto">
+    <button class="btn btn-secondary m-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top Popover" aria-haspopup="true" aria-expanded="true">
+      Top Popover
+    </button>
+  </div>
+  <div class="col-auto">
+    <button type="button" class="btn btn-secondary m-1" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+      Tooltip on left
+    </button>
+  </div>
+</div>
+&nbsp;
+<!-- Custom toggle -->
+<h2 class="mt-4">Custom toggle</H2>
 <div class="row">
   <div class="card border h-100 border-secondary mb-3 mt-3">
     <div class="card-body">
@@ -167,6 +175,8 @@
   </div>
 </div>
 &nbsp;
+<!-- Styled table -->
+<h2 class="mt-4">Styled table within card</H2>
 <div class="card mb-3" id="ordersTable" data-list="{&quot;valueNames&quot;:[&quot;order&quot;,&quot;date&quot;,&quot;address&quot;,&quot;status&quot;,&quot;amount&quot;],&quot;page&quot;:10,&quot;pagination&quot;:true}">
   <div class="card-header">
     <div class="row flex-between-center">
@@ -343,46 +353,6 @@
         </tbody>
       </table>
     </div>
-    <h2 class="mt-4">TESTING BOOTSTRAP MODAL</h2>
-    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#error-modal">Launch demo modal</button>
-    <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
-        <div class="modal-content position-relative">
-          <div class="position-absolute top-0 end-0 mt-2 me-2 z-1">
-            <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body p-0">
-            <div class="rounded-top-3 py-3 ps-4 pe-6 bg-body-tertiary">
-              <h4 class="mb-1" id="modalExampleDemoLabel">Add a new illustration </h4>
-            </div>
-            <div class="p-4 pb-0">
-              <form>
-                <div class="mb-3">
-                  <label class="col-form-label" for="recipient-name">Recipient:</label>
-                  <input class="form-control" id="recipient-name" type="text" />
-                </div>
-                <div class="mb-3">
-                  <label class="col-form-label" for="message-text">Message:</label>
-                  <textarea class="form-control" id="message-text"></textarea>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-            <button class="btn btn-primary" type="button">Understood </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h2 class="mt-4">TESTING BOOTSTRAP COLLAPSE</h2>
-    <p>
-      <a class="mt-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
-      <button class="btn btn-falcon-default ms-sm-2 mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-bs-target</button>
-    </p>
-    <div class="collapse" id="collapseExample">
-      <div class="border p-x1 rounded">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
-    </div>
   </div>
   <div class="card-footer">
     <div class="d-flex align-items-center justify-content-center"><button class="btn btn-sm btn-falcon-default me-1 disabled" type="button" title="Previous" data-list-pagination="prev" disabled=""><svg class="svg-inline--fa fa-chevron-left fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg><!-- <span class="fas fa-chevron-left"></span> Font Awesome fontawesome.com --></button>
@@ -390,6 +360,55 @@
     </div>
   </div>
 </div>
+&nbsp;
+<!-- Bootstrap modal -->
+<h2 class="mt-4">Bootstrap modal</h2>
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#error-modal">Launch demo modal</button>
+<div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
+    <div class="modal-content position-relative">
+      <div class="position-absolute top-0 end-0 mt-2 me-2 z-1">
+        <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="rounded-top-3 py-3 ps-4 pe-6 bg-body-tertiary">
+          <h4 class="mb-1" id="modalExampleDemoLabel">Add a new illustration </h4>
+        </div>
+        <div class="p-4 pb-0">
+          <form>
+            <div class="mb-3">
+              <label class="col-form-label" for="recipient-name">Recipient:</label>
+              <input class="form-control" id="recipient-name" type="text" />
+            </div>
+            <div class="mb-3">
+              <label class="col-form-label" for="message-text">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-primary" type="button">Understood </button>
+      </div>
+    </div>
+  </div>
+</div>
+&nbsp;
+<!-- Bootstrap modal -->
+<h2 class="mt-4">Bootstrap collapse</h2>
+<p>
+  <a class="mt-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
+  <button class="btn btn-falcon-default ms-sm-2 mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-bs-target</button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="border p-x1 rounded">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+</div>
+<!-- Bootstrap modal -->
+<h2 class="mt-4">Chart Js</h2>
+<canvas class="max-w-100" id="chartjs-bar-chart" width="1618" height="1000"></canvas>
+Line Chart
+
 
 
 
