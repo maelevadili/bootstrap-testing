@@ -56,6 +56,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 //     eventColor: '#00d27a'
 //   });
 // };
+
 // function clearCalendar() {
 //   $('#calendar').fullCalendar('delete');
 //   $('#calendar').html('');
