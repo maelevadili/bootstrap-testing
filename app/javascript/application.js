@@ -5,6 +5,7 @@ import "flatpickr"
 import "@popperjs/core"
 import "bootstrap"
 import "fullcalendar"
+import "simplebar"
 
 // Conflict with Bootstrap ⬇️
 // import "theme"

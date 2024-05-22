@@ -33,6 +33,8 @@ let events = [
 
 export default class extends Controller {
   connect() {
+    console.log("Hello from fullcalendar_controller.js");
+
     var calendarEl = document.getElementById('calendar');
     var calendar = new Calendar(calendarEl, {
       // plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
