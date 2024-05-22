@@ -6,6 +6,7 @@ import "@popperjs/core"
 import "bootstrap"
 import "fullcalendar"
 import "simplebar"
+import "chart.js"
 
 // Conflict with Bootstrap ⬇️
 // import "theme"
