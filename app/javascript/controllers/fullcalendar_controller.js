@@ -1,4 +1,5 @@
 // Not use for now (can't make it work properly)
+// https://fullcalendar.io/docs/plugin-index
 
 import { Controller } from "@hotwired/stimulus"
 import { Calendar } from "fullcalendar"
@@ -26,8 +27,13 @@ export default class extends Controller {
   connect() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new Calendar(calendarEl, {
+      // plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
+      // Declare plugins is not needed.
+      // I guess they're automatically added from "fullcalendar"
+      // See https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.js
       initialView: 'dayGridMonth',
       // initialView: 'listMonth',
+      // initialView: 'listWeek',
       // initialView: 'dayGridWeek',
       // initialView: 'dayGridDay',
       defaultView: 'dayGridMonth',
