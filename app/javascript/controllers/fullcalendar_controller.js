@@ -31,6 +31,26 @@ let events = [
   }
 ];
 
+let test = document.getElementById("calendar-filter").value;
+console.log(test);
+
+let userView = function calendarViewChange() {
+  if (document.getElementById("calendar-filter").value == "Day view") {
+    userView = 'timeGridDay';
+  }
+  else if (document.getElementById("calendar-filter").value == "List view") {
+    userView = 'listWeek';
+  }
+  else if (document.getElementById("calendar-filter").value == "Month view") {
+    userView = 'dayGridMonth';
+  }
+  else {
+    userView = 'timeGridWeek';
+  }
+};
+console.log(userView);
+console.log("Hello from fullcalendar_controller.js 2");
+
 export default class extends Controller {
   connect() {
     console.log("Hello from fullcalendar_controller.js");

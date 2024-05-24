@@ -62,7 +62,7 @@
 &nbsp;
 <!-- Fullcalendar -->
 <h2 class="mt-4">Fullcalendar</H2>
-<div class="card overflow-hidden">
+<div class="card overflow-hidden" data-controller="fullcalendar">
   <div class="card-header">
     <div class="row gx-0 align-items-center">
       <div class="col-auto d-flex justify-content-end order-md-1">
@@ -81,38 +81,54 @@
         <hr />
       </div>
       <div class="col-auto d-flex order-md-0">
-        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#addEventModal"> <span class="fas fa-plus me-2"></span>
+        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#addEventModal">
+          <span class="fas fa-plus me-2"></span>
           Add Schedule
         </button>
       </div>
       <div class="col d-flex justify-content-end order-md-2">
         <div class="dropdown font-sans-serif me-md-2">
-          <button class="btn btn-falcon-default text-600 btn-sm dropdown-toggle dropdown-caret-none" type="button" id="email-filter" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span data-view-title="data-view-title">
-            Month View</span><span class="fas fa-sort ms-2 fs-10"></span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="email-filter">
-            <a class="active dropdown-item d-flex justify-content-between" href="#!" data-fc-view="dayGridMonth">
+          <select class="btn btn-falcon-default text-600 btn-sm dropdown-toggle dropdown-caret-none" type="button" id="calendar-filter" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false" onchange="calendarViewChange()">
+            <option selected="selected">
+              <span class="week-view" data-fc-view="timeGridWeek" data-view-title="data-view-title">Week View</span>
+              <span class="fas fa-sort ms-2 fs-10"></span>
+            </option>
+            <option>
+              <span class="day-view" data-fc-view="timeGridDay" data-view-title="data-view-title">Day View</span>
+              <span class="fas fa-sort ms-2 fs-10"></span>
+            </option>
+            <option>
+              <span class="list-week" data-fc-view="listWeek" data-view-title="data-view-title">List view</span>
+              <span class="fas fa-sort ms-2 fs-10"></span>
+            </option>
+            <option>
+              <span class="month-view" data-fc-view="dayGridMonth" data-view-title="data-view-title">Month View</span>
+              <span class="fas fa-sort ms-2 fs-10"></span>
+            </option>
+
+
+          </select>
+          <%# <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="calendar-filter">
+            <a class="active dropdown-item d-flex justify-content-between" data-fc-view="dayGridMonth">
               Month View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
             </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="timeGridWeek">
+            <a class="dropdown-item d-flex justify-content-between" data-fc-view="timeGridWeek">
               Week View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
             </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="timeGridDay">
+            <a class="dropdown-item d-flex justify-content-between" data-fc-view="timeGridDay">
               Day View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
             </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="listWeek">
+            <a class="dropdown-item d-flex justify-content-between" data-fc-view="listWeek">
               List View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
             </a>
-            <a class="dropdown-item d-flex justify-content-between" href="#!" data-fc-view="listYear">
-              Year View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
-            </a>
-          </div>
+          </div> %>
         </div>
       </div>
     </div>
   </div>
   <div class="card-body">
-    <div data-controller="fullcalendar" id="calendar"></div>
+    <%# <div data-controller="fullcalendar" id="calendar"></div> %>
+    <div id="calendar"></div>
   </div>
 </div>
 &nbsp;
