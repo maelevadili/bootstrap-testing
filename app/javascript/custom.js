@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-/* Shadow on navbar top, onscroll */
+/* Shadow on top navbar, onscroll */
 /* -------------------------------------------------------------------------- */
 
 const topBar = document.getElementById("topnav");

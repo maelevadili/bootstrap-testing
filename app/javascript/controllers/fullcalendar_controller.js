@@ -72,10 +72,9 @@ let events = [
 
 // var utils = getData;
 
-
 export default class extends Controller {
   connect() {
-    // console.log("Hello from fullcalendar_controller.js");
+    console.log("Hello from fullcalendar_controller.js");
 
     var calendarEl = document.getElementById('calendar');
 
@@ -100,6 +99,10 @@ export default class extends Controller {
       eventColor: '#00d27a'
     });
     calendar.render();
+
+    // console.log(calendar.getOption('initialView'));
+    // calendar.changeView('timeGridDay');
+    // console.log(calendar.view.type);
 
     // JUST TRYING SOMETHING, WORK IN PROGRESS. NEVERMIND FOR NOW.
     // document.addEventListener('DOMContentLoaded', function () {
