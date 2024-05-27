@@ -9,17 +9,13 @@ import "fullcalendar"
 import "simplebar"
 import "chart.js"
 
-/* -------------------------------------------------------------------------- */
-/* Bootstrap */
-/* -------------------------------------------------------------------------- */
-
-// Enable popovers everywhere
+// Enable Bootstrap popovers everywhere 🚫 Do not remove
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
 
-// Enable tooltips everywhere
+// Enable Bootstrap tooltips everywhere 🚫 Do not remove
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
