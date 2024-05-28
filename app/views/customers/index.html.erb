@@ -1,65 +1,66 @@
 <p style="color: green"><%= notice %></p>
 <h1>Customers</h1>
 <!-- Customer new -->
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Firstname</th>
-      <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Lastname</th>
-      <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Email</th>
-      <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Phone</th>
-      <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="date">Date of birth</th>
-      <th scope="col" class="text-900 pe-1 white-space-nowrap" data-sort="order">Actions</th>
-    </tr>
-  </thead>
-  <% @customers.each do |customer| %>
-    <tbody>
+<div class="table-responsive scrollbar">
+  <table class="table table-hover table-striped overflow-hidden">
+    <thead class="table-secondary">
       <tr>
-        <th><%= customer.firstname %></th>
-        <td><%= customer.lastname.upcase %></td>
-        <td><%= customer.email %></td>
-        <td><%= customer.phone %></td>
-        <td><%= customer.date_of_birth %></td>
-        <td class="py-2 align-middle white-space-nowrap">
-          <div class="dropdown font-sans-serif position-static">
-          <button class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal" type="button" id="order-dropdown-0" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
-            <span class="fas fa-ellipsis-h fs-10"></span>
-          </button>
-            <div class="dropdown-menu dropdown-menu-end border py-0" aria-labelledby="order-dropdown-0">
-              <div class="py-2">
-                <!-- Customer show -->
-                <%= link_to customer_path(customer.id),
-                class: "dropdown-item" do %>
-                  <%# <i class="fas fa-eye"></i>  %>
-                  Get details
-                <% end %>
-                <!-- Customer edit -->
-                <%= link_to edit_customer_path(customer.id),
-                class: "dropdown-item" do %>
-                  <%# <i class="fas fa-edit"></i>  %>
-                  Edit
-                <% end %>
-                <div class="dropdown-divider"></div>
-                <!-- Customer destroy -->
-                <%= link_to customer_path(customer.id),
-                  method: :delete,
-                  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'},
-                  class: "dropdown-item text-danger" do %>
-                    <%# <i class="fas fa-trash-alt"></i>  %>
-                    Delete
-                <% end %>
+        <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Firstname</th>
+        <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Lastname</th>
+        <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Email</th>
+        <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="order">Phone</th>
+        <th scope="col" class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="date">Date of birth</th>
+        <th scope="col" class="text-900 pe-1 white-space-nowrap" data-sort="order">Actions</th>
+      </tr>
+    </thead>
+    <% @customers.each do |customer| %>
+      <tbody>
+        <tr>
+          <th><%= customer.firstname %></th>
+          <td><%= customer.lastname.upcase %></td>
+          <td><%= customer.email %></td>
+          <td><%= customer.phone %></td>
+          <td><%= customer.date_of_birth %></td>
+          <td class="py-2 align-middle white-space-nowrap">
+            <div class="dropdown font-sans-serif position-static">
+            <button class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal" type="button" id="order-dropdown-0" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+              <span class="fas fa-ellipsis-h fs-10"></span>
+            </button>
+              <div class="dropdown-menu dropdown-menu-end border py-0" aria-labelledby="order-dropdown-0">
+                <div class="py-2">
+                  <!-- Customer show -->
+                  <%= link_to customer_path(customer.id),
+                  class: "dropdown-item" do %>
+                    <%# <i class="fas fa-eye"></i>  %>
+                    Get details
+                  <% end %>
+                  <!-- Customer edit -->
+                  <%= link_to edit_customer_path(customer.id),
+                  class: "dropdown-item" do %>
+                    <%# <i class="fas fa-edit"></i>  %>
+                    Edit
+                  <% end %>
+                  <div class="dropdown-divider"></div>
+                  <!-- Customer destroy -->
+                  <%= link_to customer_path(customer.id),
+                    method: :delete,
+                    data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'},
+                    class: "dropdown-item text-danger" do %>
+                      <%# <i class="fas fa-trash-alt"></i>  %>
+                      Delete
+                  <% end %>
+                </div>
               </div>
             </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+  <%= link_to new_customer_path, class: "btn btn-success" do %>
+    <i class="fa-solid fa-plus"></i> Add customer
   <% end %>
-</table>
-<%= link_to new_customer_path, class: "btn btn-success" do %>
-  <i class="fa-solid fa-plus"></i> Add customer
-<% end %>
-&nbsp;
+</div>
 <!-- Fullcalendar -->
 <h2 class="mt-4">Fullcalendar</H2>
 <div class="card overflow-hidden" data-controller="fullcalendar">
