@@ -91,10 +91,10 @@
       </div>
       <div class="col d-flex justify-content-end order-md-2">
         <div class="dropdown font-sans-serif me-md-2">
-          <button class="btn btn-falcon-default text-600 btn-sm dropdown-toggle dropdown-caret-none" type="button" id="email-filter" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-falcon-default text-600 btn-sm dropdown-toggle dropdown-caret-none" type="button" id="calendar-view-selector" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
             <span data-view-title="data-view-title">Week View</span><span class="fas fa-sort ms-2 fs-10"></span>
           </button>
-          <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="email-filter">
+          <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="calendar-view-selector">
             <a class="active dropdown-item d-flex justify-content-between" href="#!" data-fc-view="timeGridWeek">
               Week View<span class="icon-check"><span class="fas fa-check" data-fa-transform="down-4 shrink-4"></span></span>
             </a>
@@ -120,6 +120,25 @@
   </div>
 </div>
 &nbsp;
+<div class="modal fade" id="addEventModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content border">
+      <form id="addEventForm" autocomplete="off">
+        <div class="modal-header px-x1 bg-body-tertiary border-bottom-0">
+          <h5 class="modal-title">Create Schedule</h5><button class="btn-close me-n1" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-x1">
+          <div class="mb-3">
+            <label class="fs-9" for="eventTitle">Title</label>
+            <input class="form-control" id="eventTitle" type="text" name="title" required="required">
+          </div>
+          <p>Some other inputs...</p>
+        </div>
+        <div class="modal-footer d-flex justify-content-end align-items-center bg-body-tertiary border-0"><a class="me-3 text-600" href="../app/events/create-an-event.html">More options</a><button class="btn btn-primary px-4" type="submit">Save</button></div>
+      </form>
+    </div>
+  </div>
+</div>
 <!-- Simplebar -->
 <h2 class="mt-4">Simplebar</H2>
 <div data-simplebar class="card scrollbar-overlay" style="max-height: 10rem" data-controller="simplebar">
